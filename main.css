@@ -1,0 +1,61 @@
+@font-face{
+ font-family:'digital-7';
+ src: url('digital-7.ttf');
+}
+
+html{
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  background: url(night.jpg) no-repeat;
+  background-size: 100% 100%;
+}
+
+.morning{
+  background: url(morning.jpg) no-repeat;
+  background-size: 100% 100%;
+}
+
+.afternoon{
+  background: url(afternoon.jpg) no-repeat;
+  background-size: 100% 100%;
+}
+
+.night{
+  background: url(night.jpg) no-repeat;
+  background-size: 100% 100%;
+}
+
+.greet{
+    font-family: 'Zilla Slab', serif;
+    font-weight: bold;
+    font-size: 100px;
+    color: #fff;
+    margin-left: 50px;
+}
+
+.clock{
+  color: #fff;
+  position: absolute;
+  top:0;
+  bottom: 200px;
+  margin: auto;
+  width: 100%;
+  height: 50px;
+}
+
+.date{
+  font-size: 100px;
+  font-family: 'Montserrat', serif;
+  text-align: center;
+}
+
+.time{
+  font-family: 'digital-7', serif;
+  font-size: 120px;
+  text-align: center;
+  color: #fff;
+  padding-bottom: 10px;
+}
