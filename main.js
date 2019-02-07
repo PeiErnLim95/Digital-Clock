@@ -3,9 +3,10 @@ function displayTime(){
     var hour = dates.getHours();
     var minute = dates.getMinutes();
     var second = dates.getSeconds();
-    var day = dates.getDay();
-    var month = dates.getMonth();
+    var day = dates.getDate();
+    var month = dates.getMonth() + 1;
     var year = dates.getFullYear();
+    var wday = dates.getDay();
     var months;
 
     switch (month) {
@@ -46,13 +47,40 @@ function displayTime(){
             months = "December";
             break;
         default:
-    } 
+    }
+    
+    switch (wday) {
+        case 1:
+            wday = "Monday";
+            break;
+        case 2:
+            wday = "Tuesday";
+            break;
+        case 3:
+            wday = "Wednesday";
+            break;
+        case 4:
+            wday = "Thursday";
+            break;
+        case 5:
+            wday = "Friday";
+            break;
+        case 6:
+            wday = "Saturday";
+            break;
+        case 7:
+            wday = "Sunday";
+            break;
+        default:
+    }
+
     document.getElementById("hour").textContent = padding(hour);
     document.getElementById("minute").textContent = padding(minute);
     document.getElementById("second").textContent = padding(second);
     document.getElementById("day").textContent = padding(day);
     document.getElementById("month").textContent = months;
     document.getElementById("year").textContent = year;
+    document.getElementById("wday").textContent = wday;
 }
 
 function padding(digit){
